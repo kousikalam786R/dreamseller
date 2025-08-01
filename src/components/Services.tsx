@@ -7,7 +7,7 @@ import { Zap, Brain, Cpu, Code } from 'lucide-react'
 
 const Services = () => {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, threshold: 0.2 })
+  const isInView = useInView(ref, { once: true })
 
   const services = [
     {

@@ -7,7 +7,7 @@ import { Mail, Github, Linkedin, Twitter, Send } from 'lucide-react'
 
 const Contact = () => {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, threshold: 0.2 })
+  const isInView = useInView(ref, { once: true })
   
   const [formData, setFormData] = useState({
     name: '',
