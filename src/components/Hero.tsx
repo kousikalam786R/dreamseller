@@ -4,6 +4,15 @@ import { motion } from 'framer-motion'
 import { ChevronDown } from 'lucide-react'
 
 const Hero = () => {
+  // Create deterministic particle data to avoid hydration mismatch
+  const particles = Array.from({ length: 50 }, (_, i) => ({
+    id: i,
+    left: ((i * 7) % 100) + (i % 20), // Deterministic positioning
+    top: ((i * 11) % 100) + (i % 15),
+    duration: 2 + (i % 3), // 2-4 seconds
+    delay: (i % 2) * 0.5, // 0 or 0.5 seconds
+  }))
+
   return (
     <section className="min-h-screen relative flex items-center justify-center overflow-hidden">
       {/* Background gradient */}
@@ -11,22 +20,22 @@ const Hero = () => {
       
       {/* Animated background particles */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(50)].map((_, i) => (
+        {particles.map((particle) => (
           <motion.div
-            key={i}
+            key={particle.id}
             className="absolute w-1 h-1 bg-primary-purple/30 rounded-full"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
+              left: `${particle.left}%`,
+              top: `${particle.top}%`,
             }}
             animate={{
               y: [0, -100, 0],
               opacity: [0, 1, 0],
             }}
             transition={{
-              duration: Math.random() * 3 + 2,
+              duration: particle.duration,
               repeat: Infinity,
-              delay: Math.random() * 2,
+              delay: particle.delay,
             }}
           />
         ))}
