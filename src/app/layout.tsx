@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'DreamSeller - Building Innovative Products & AI Services for the Future',
-  description: 'AI startup building cutting-edge tools and providing automation services. Discover our products: MrEnglish, MedEasy, and EasyDelivery.',
+  description: 'AI startup building cutting-edge tools and providing automation services. Discover our products: SpeakVerse, MedEasy, and EasyDelivery.',
   keywords: 'AI, automation, mobile apps, web development, custom GPT, LLM',
 }
 

@@ -10,7 +10,7 @@ const About = () => {
 
   const timelineItems = [
     { year: '2023', title: 'Company Founded', description: 'Started with a vision to revolutionize AI services' },
-    { year: '2024', title: 'First Products', description: 'Launched MrEnglish and MedEasy platforms' },
+    { year: '2024', title: 'First Products', description: 'Launched SpeakVerse and MedEasy platforms' },
     { year: '2025', title: 'Expansion', description: 'Growing our product suite and automation services' },
   ]
 
